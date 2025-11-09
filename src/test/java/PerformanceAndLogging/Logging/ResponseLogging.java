@@ -1,4 +1,4 @@
-package HeadersandParametersManagement.AddContentTypetorequest;
+package PerformanceAndLogging.Logging;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -6,35 +6,30 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.json.JSONObject;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
-public class WithoutContentType_Demo {
+public class ResponseLogging {
     public static void main(String[] args) {
-        JSONObject data = new JSONObject();
-
-        data.put("name", "William");
-        data.put("job", "Manager");
-
+        String body = "{\\\"name\\\":\\\"apitest\\\",\\\"salary\\\":\\\"5000\\\",\\\"age\\\":\\\"30\\\"}";
         RequestSpecification req = new RequestSpecBuilder()
                 .setBaseUri("https://reqres.in")
                 .setBasePath("/api")
                 .addHeader("x-api-key", "reqres-free-v1")
-                .setBody(data.toString(3))
+                .setContentType(ContentType.JSON)
+                .setBody(body)
                 .build();
 
         ResponseSpecification res = new ResponseSpecBuilder()
-                .expectStatusCode(anyOf(is(200), is(201)))
-                .expectBody("name", equalToIgnoringCase("William"))
-                .expectBody("job", equalToIgnoringCase("Manager"))
+                .expectBody("data.email", equalTo("janet.weaver@reqres.in"))
+                .expectBody("data.first_name", equalTo("Janet"))
+                .expectBody("data.last_name", equalTo("Weaver"))
                 .build();
 
         RestAssured.given()
                 .spec(req)
-                .log().all()
                 .when()
-                .post("/users")
+                .get("/users/2")
                 .then()
                 .spec(res)
                 .log().all();
