@@ -1,42 +1,34 @@
-package HeadersandParametersManagement.AddContentTypetorequest;
+package PerformanceAndLogging.verifyTheResponseTimeOfRequest;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.json.JSONObject;
+import org.hamcrest.Matchers;
 
-import static org.hamcrest.Matchers.*;
-
-public class WithoutContentType_Demo {
+public class InterfaceValidatableResponseOptions {
     public static void main(String[] args) {
-        JSONObject data = new JSONObject();
-
-        data.put("name", "William");
-        data.put("job", "Manager");
-
         RequestSpecification req = new RequestSpecBuilder()
                 .setBaseUri("https://reqres.in")
                 .setBasePath("/api")
                 .addHeader("x-api-key", "reqres-free-v1")
-                .setBody(data.toString(3))
                 .build();
 
         ResponseSpecification res = new ResponseSpecBuilder()
-                .expectStatusCode(anyOf(is(200), is(201)))
-                .expectBody("name", equalToIgnoringCase("William"))
-                .expectBody("job", equalToIgnoringCase("Manager"))
+                .expectStatusCode(200)
+                .expectStatusLine("HTTP/1.1 200 OK")
                 .build();
 
-        RestAssured.given()
+        Response response = RestAssured.given()
                 .spec(req)
-                .log().all()
                 .when()
-                .post("/users")
+                .get("/users/2")
                 .then()
                 .spec(res)
-                .log().all();
+                .time(Matchers.lessThan(3000L))
+                .time(Matchers.greaterThan(200L))
+                .extract().response();
     }
 }
