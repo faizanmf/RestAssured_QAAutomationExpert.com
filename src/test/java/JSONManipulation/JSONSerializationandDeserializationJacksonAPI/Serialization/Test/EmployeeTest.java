@@ -1,6 +1,6 @@
-package JSONManipulation.JSONSerializationandDeserialization.Serialization.Test;
+package JSONManipulation.JSONSerializationandDeserializationJacksonAPI.Serialization.Test;
 
-import JSONManipulation.JSONSerializationandDeserialization.Serialization.POJOClass.Employee;
+import JSONManipulation.JSONSerializationandDeserializationJacksonAPI.Serialization.POJOClass.Employee;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;

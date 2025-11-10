@@ -1,0 +1,50 @@
+{
+  "companyName" : "QAAutomation",
+  "companyEmailId" : "qaautomation@org.com",
+  "companyNumber" : "+353891234121",
+  "companyAddress" : "12, HeneryStreet, Dublin, D12PW20",
+  "supportedSalaryBanks" : [ "AIB", "BOI", "PSB" ],
+  "employee" : [ {
+    "firstName" : "Vibha",
+    "lastName" : "Singh",
+    "age" : 30,
+    "salary" : 75000.0,
+    "designation" : "Manager",
+    "contactNumber" : "+919999988822",
+    "emailId" : "abc@test.com"
+  }, {
+    "firstName" : "Neha",
+    "lastName" : "Verms",
+    "age" : 35,
+    "salary" : 60000.0,
+    "designation" : "Lead",
+    "contactNumber" : "+914442266221",
+    "emailId" : "xyz@test.com"
+  }, {
+    "firstName" : "Rajesh",
+    "lastName" : "Gupta",
+    "age" : 20,
+    "salary" : 40000.0,
+    "designation" : "Intern",
+    "contactNumber" : "+919933384422",
+    "emailId" : "pqr@test.com"
+  } ],
+  "contractors" : [ {
+    "firstName" : "John",
+    "lastName" : "Mathew",
+    "contractFrom" : "Jan-2018",
+    "contractTo" : "Aug-2022",
+    "contactNumber" : "+919631384422"
+  }, {
+    "firstName" : "Seema",
+    "lastName" : "Mathew",
+    "contractFrom" : "Jun-2019",
+    "contractTo" : "Jun-2023",
+    "contactNumber" : "+919688881422"
+  } ],
+  "companyPFDetails" : {
+    "pfName" : "XYZ",
+    "pfYear" : 2020,
+    "noOfEmployees" : 100
+  }
+}

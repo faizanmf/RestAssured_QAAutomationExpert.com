@@ -1,15 +1,24 @@
-package JSONManipulation.JSONSerializationandDeserialization.Deserialization.POJOClass;
+package JSONManipulation.JSONSerializationandDeserializationJacksonAPI.AnnotationinJacksonAPI;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Employee {
 
-    // private variables or data members of POJO class
+    // private variables or data members of pojo class
     private String firstName;
     private String lastName;
     private int age;
     private double salary;
     private String designation;
     private String contactNumber;
+
+    @JsonIgnore
     private String emailId;
+
+    @JsonIgnore
+    private String gender;
+
+    private String maritalStatus;
 
     // Getter and setter methods
     public String getFirstName() {
@@ -68,4 +77,19 @@ public class Employee {
         this.emailId = emailId;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getMaritalStatus() {
+        return maritalStatus;
+    }
+
+    public void setMaritalStatus(String maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
 }
