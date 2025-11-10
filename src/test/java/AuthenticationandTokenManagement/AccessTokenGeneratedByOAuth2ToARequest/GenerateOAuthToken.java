@@ -1,7 +1,7 @@
 package AuthenticationandTokenManagement.AccessTokenGeneratedByOAuth2ToARequest;
 
-import io.restassured.response.Response;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 

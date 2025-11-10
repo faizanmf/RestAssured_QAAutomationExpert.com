@@ -9,7 +9,6 @@ import io.restassured.specification.ResponseSpecification;
 import org.json.JSONObject;
 
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 public class WithContentType_Demo {
     public static void main(String[] args) {

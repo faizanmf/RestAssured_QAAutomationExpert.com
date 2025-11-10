@@ -8,7 +8,6 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.core.IsEqual.equalTo;
 
 public class HamcrestHasKeyAssertion {
     public static void main(String[] args) {

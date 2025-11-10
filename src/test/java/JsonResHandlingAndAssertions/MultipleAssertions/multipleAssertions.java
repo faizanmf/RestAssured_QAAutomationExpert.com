@@ -1,8 +1,6 @@
 package JsonResHandlingAndAssertions.MultipleAssertions;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.anyOf;
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class multipleAssertions {

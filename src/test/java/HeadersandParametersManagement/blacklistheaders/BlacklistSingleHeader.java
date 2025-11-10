@@ -7,9 +7,7 @@ import io.restassured.config.LogConfig;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.equalTo;
 
 public class BlacklistSingleHeader {
     public static void main(String[] args) {
