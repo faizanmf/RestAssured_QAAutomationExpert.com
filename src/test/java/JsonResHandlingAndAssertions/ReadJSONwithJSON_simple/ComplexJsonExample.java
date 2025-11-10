@@ -1,10 +1,9 @@
 package JsonResHandlingAndAssertions.ReadJSONwithJSON_simple;
 
-import com.github.cliftonlabs.json_simple.*;
-
-import java.nio.file.Paths;
-
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonException;
 import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
 
 import java.io.IOException;
 import java.math.BigDecimal;
