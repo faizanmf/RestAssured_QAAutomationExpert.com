@@ -1,4 +1,4 @@
-package JSONManipulation.JSONSerializationandDeserialization.Serialization.POJOClass;
+package JSONManipulation.JSONSerializationandDeserializationJacksonAPI.Serialization.POJOClass;
 
 public class Employee {
     private String firstName;

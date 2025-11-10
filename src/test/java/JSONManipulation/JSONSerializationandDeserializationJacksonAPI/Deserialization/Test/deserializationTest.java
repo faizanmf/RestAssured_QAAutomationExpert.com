@@ -1,6 +1,6 @@
-package JSONManipulation.JSONSerializationandDeserialization.Deserialization.Test;
+package JSONManipulation.JSONSerializationandDeserializationJacksonAPI.Deserialization.Test;
 
-import JSONManipulation.JSONSerializationandDeserialization.Deserialization.POJOClass.Employee;
+import JSONManipulation.JSONSerializationandDeserializationJacksonAPI.Deserialization.POJOClass.Employee;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
