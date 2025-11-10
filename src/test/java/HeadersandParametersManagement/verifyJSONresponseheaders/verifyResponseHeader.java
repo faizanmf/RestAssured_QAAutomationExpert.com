@@ -3,12 +3,10 @@ package HeadersandParametersManagement.verifyJSONresponseheaders;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 public class verifyResponseHeader {
     public static void main(String[] args) {

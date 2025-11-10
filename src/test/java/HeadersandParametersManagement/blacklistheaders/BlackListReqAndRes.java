@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class BlackListReqAndRes {

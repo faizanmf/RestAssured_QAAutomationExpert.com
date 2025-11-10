@@ -2,7 +2,6 @@ package AuthenticationandTokenManagement.AccessTokenGeneratedByOAuth2ToARequest;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.testng.Assert;
 
 public class testRequest {
     public static void main(String[] args) {

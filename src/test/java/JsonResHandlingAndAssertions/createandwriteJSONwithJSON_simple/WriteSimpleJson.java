@@ -1,6 +1,5 @@
 package JsonResHandlingAndAssertions.createandwriteJSONwithJSON_simple;
 
-import com.github.cliftonlabs.json_simple.Jsoner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

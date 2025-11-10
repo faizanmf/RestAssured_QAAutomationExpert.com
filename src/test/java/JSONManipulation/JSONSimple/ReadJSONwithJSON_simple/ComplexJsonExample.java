@@ -1,4 +1,4 @@
-package JsonResHandlingAndAssertions.ReadJSONwithJSON_simple;
+package JSONManipulation.JSONSimple.ReadJSONwithJSON_simple;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonException;
@@ -11,8 +11,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class ComplexJsonExample {
-    public static void main(String[] args) throws IOException {
-        String jsonString = new String(Files.readAllBytes(Paths.get("src/test/resources/payloads/complex.json")));
+
+    public static void main(String args[]) throws IOException {
+
+        String jsonString = new String(Files.readAllBytes(Paths.get("src/test/resources/SimpleJson/complex.json")));
         try {
             JsonObject jsonObject = (JsonObject) Jsoner.deserialize(jsonString);
 
@@ -46,4 +48,3 @@ public class ComplexJsonExample {
         }
     }
 }
-

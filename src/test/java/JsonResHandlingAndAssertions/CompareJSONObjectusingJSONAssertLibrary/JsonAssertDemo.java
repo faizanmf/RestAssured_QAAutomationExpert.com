@@ -1,8 +1,5 @@
 package JsonResHandlingAndAssertions.CompareJSONObjectusingJSONAssertLibrary;
 
-import com.jayway.jsonpath.JsonPath;
-import io.restassured.internal.path.json.JSONAssertion;
-import org.json.JSONArray;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
